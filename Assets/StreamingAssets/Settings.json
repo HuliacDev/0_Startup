@@ -1,7 +1,7 @@
 {
-  "useInactivityTimer": false,
-  "resetTime": 20,
-  "targetFrameRate": 60,
+  "useInactivityTimer": true,
+  "resetTime": 60,
+  "targetFrameRate": 0,
   "focusRestoreDelay": 3,
   "focusRestoreRetryInterval": 3,
   "alwaysOnTop": false,
