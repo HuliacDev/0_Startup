@@ -31,12 +31,12 @@ git clone https://github.com/wonjeong97/0_Startup.git
    | `.gitignore` | git에서 뺄 파일 |
    | `.gitattributes` | 큰 이미지·영상은 Git LFS로, DLL·서드파티 파일은 일반 파일로 저장하는 규칙 |
    | `CLAUDE.md` | 프로젝트 설명 틀(Claude Code용) |
-   | `README.project.md` | 프로젝트 README 틀(프로젝트 이름, 한 줄 개요, Unity 버전). 새 프로젝트에서는 이름을 `README.md` 로 바꿉니다 |
+   | `README.project.md` | 프로젝트 README 틀(이름과 한 줄 소개, 주요 기능, 기술 스택, 폴더 구조, 사용법 및 설정). 새 프로젝트에서는 이름을 `README.md` 로 바꿉니다 |
 
 2. Unity Hub에서 **Add > Add project from disk** 로 새 폴더를 엽니다. 처음 한 번은 패키지를 받느라 몇 분 걸립니다.
 3. **Edit > Project Settings > Player** 에서 **Product Name** 을 새 프로젝트 이름으로 바꿉니다.
    앱 로그 폴더와 PlayerPrefs 위치가 Company Name·Product Name으로 정해지므로, 그대로 두면 같은 PC에 설치한 다른 앱과 섞입니다.
-4. `README.md`(복사한 `README.project.md`)에 프로젝트 이름과 한 줄 개요를 적습니다. 나중에 Unity 버전을 올리면 README의 Unity 버전도 함께 고칩니다.
+4. `README.md`(복사한 `README.project.md`)의 칸을 채웁니다. 나중에 Unity 버전을 올리면 README의 Unity 버전도 함께 고칩니다.
 
 > 이미 시작한 프로젝트에는 템플릿 변경이 자동으로 들어가지 않습니다.
 > 공통 코드(HuliacDev Template)와 스택 패키지는 `Tools > Update Stack Packages` 로 올리고, 그 밖의 변경은 필요한 파일만 골라 옮깁니다.
