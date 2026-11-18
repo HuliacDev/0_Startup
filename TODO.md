@@ -10,7 +10,8 @@
 
 ## 완료
 
-- [x] HuliacDev Template 패키지 26.11.18-2 → 26.11.18-3 업데이트(packages-lock.json 고정 커밋 e8a306b → 6b950a6: `F` 키 표시의 각 줄이 한 줄로 보이게 함) — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #82) (완료: 2026-11-19)
+- [x] HuliacDev Template 패키지 26.11.18-3 → 26.11.18-4 업데이트(packages-lock.json 고정 커밋 6b950a6 → 3da57e4: 응답 없음 판정 키 `autoRestartSeconds`·기본 30초, README 안내 보강), `Settings.json` 을 `"autoRestartSeconds": 30` 으로, README에 앱 끄는 법·`F` 키 표시·서버 로그·예약 종료 편집 도구 다시 빌드 안내 추가 — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #83·#84) (완료: 2026-11-18)
+- [x] HuliacDev Template 패키지 26.11.18-2 → 26.11.18-3 업데이트(packages-lock.json 고정 커밋 e8a306b → 6b950a6: `F` 키 표시의 각 줄이 한 줄로 보이게 함) — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #82) (완료: 2026-11-18)
 - [x] HuliacDev Template 패키지 26.11.18-1 → 26.11.18-2 업데이트(packages-lock.json 고정 커밋 b741851 → e8a306b: `F` 키 표시 둘째 줄에 자동 재시작 감시 상태 추가) — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #81) (완료: 2026-11-18)
 - [x] HuliacDev Template 패키지 26.11.10-5 → 26.11.18-1 업데이트(packages-lock.json 고정 커밋 9f34e0c → b741851: 숨은 종료 버튼 `GameCloser`·`closeSetting` 제거, Alt+F4로 끈 앱도 자동 재시작하고 `F` 키로 포커스 복구와 함께 끄고 켬, 서버 로그 `start (user restart)`·`start (auto restart)`·`end (Alt + F4)`·`end (Shutdown Scheduler)`·`end_kill (Task Scheduler)`), `Settings.json` 에서 `closeSetting` 삭제, README·CHANGELOG 갱신, Player Settings Version은 오늘 날짜(26.11.18) 그대로 — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #80) (완료: 2026-11-18)
 - [x] 새 프로젝트가 Unity Cloud 연결을 물려받지 않도록 ProjectSettings의 `cloudProjectId`·`projectName`·`organizationId` 를 비움(첫 커밋부터 들어 있던 값이라 git 기록에는 남음, Cloud 서비스는 원래 꺼져 있어 동작 변화 없음), Player Settings Version 26.11.18 — 담당: Claude / 검증: Antigravity + 서브에이전트 (완료: 2026-11-18)
