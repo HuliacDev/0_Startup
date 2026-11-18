@@ -4,6 +4,16 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-18 15:41] Claude → Antigravity + 서브에이전트 · Unity Cloud 연결 값 비우기 (chore/clear-cloud-project-link)
+- 요청: 프로젝트 설정에 든 조직 ID를 새 프로젝트가 물려받지 않게 비우기.
+- 변경: ProjectSettings.asset 의 `cloudProjectId`·`projectName`·`organizationId` 를 Unity 빈 문자열 형식(`key: `)으로 비움, Version 26.11.18.
+- Claude 확인: 배치 모드로 열고 닫아 return code 0, error CS 0, 설정 파일이 다시 쓰이지 않음. 다른 추적 파일에 옛 값 없음(git grep). Template 패키지 코드는 이 값을 쓰지 않고, Addressables는 CCD에서만 쓰는데 이 프로젝트에는 Addressables 설정이 없음.
+- 교차 검증 (agy gemini-4-argon-high + 서브에이전트, 1묶음):
+  - 빈 값 형식·다른 줄 변경 없음, bundleVersion 규칙 → 둘 다 통과
+  - 비웠을 때 영향(cloudEnabled 0, UnityConnectSettings 서비스 모두 꺼짐, 서비스 패키지·사용 코드 없음) → 둘 다 통과
+  - agy는 첫 요청이 5분 시간 제한에 걸려 빈 결과 → 항목을 둘로 쪼개 다시 맡겨 통과
+- 남은 것: 옛 값은 git 기록에 남음(비밀값이 아니라 기록은 다시 쓰지 않음). 배치 모드는 로그인 없이 열려, 로그인한 Editor에서 열 때 다시 채워지지 않는지는 확인하지 않음.
+
 ### [2026-11-03 12:35] Claude → Antigravity + 서브에이전트 · 회사 기술 문서 10장 기준 맞추기 (chore/bible-folder-structure)
 - 요청: 폴더 구조를 Assets/_Project 기준으로 옮기고, 새 프로젝트용 README 틀을 두고, 자동 재시작·Build 메뉴가 들어간 Template으로 올리기.
 - 변경: Scenes·Scripts·Prefabs·Input·Settings와 루트 설정 에셋 2개를 Assets/_Project 아래로(Unity 안에서 이동), 빈 UI 폴더 삭제, Art·Audio·Video에 .gitkeep. `README.project.md` 추가와 README·CLAUDE.md 틀 갱신. Template 26.11.3-2와 NuGet 의존성 업데이트, Settings.json `autoRestart` 켬, Version 26.11.3.
