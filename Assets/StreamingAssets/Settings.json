@@ -5,6 +5,6 @@
   "focusRestoreDelay": 3,
   "focusRestoreRetryInterval": 3,
   "alwaysOnTop": false,
-  "autoRestart": { "enabled": true, "autoRestartSeconds": 30, "restartDelaySeconds": 5 },
+  "autoRestart": { "enabled": true, "hangRestartSeconds": 30, "restartDelaySeconds": 5 },
   "apiUrl": ""
 }

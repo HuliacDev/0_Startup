@@ -4,6 +4,13 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-18 23:51] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.18-5 반영, 응답 없음 판정 키 되돌림 (chore/template-26.11.18-5)
+- 요청: `autoRestartSeconds` 를 원래 이름 `hangRestartSeconds` 로 되돌리기(기본 30초 유지). `alwaysOnTop: true` 는 사용자가 바꾼 값으로, 사용자 확인을 받아 따로 커밋.
+- 변경: `packages-lock.json` 고정 커밋 3da57e4 → fd662de(26.11.18-5). `Settings.json`·README·CHANGELOG의 키를 `hangRestartSeconds` 로.
+- Claude 확인: 프로젝트 사본(되돌린 Settings.json 포함)으로 로컬 Template PlayMode 190/190, 사본을 배치 모드로 열어 Template을 git에서 받아 lock 생성(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0.
+- 교차 검증: Template PR #85 묶음에 0_Startup 파일을 함께 넣어 agy·서브에이전트 모두 통과. 둘 다 `alwaysOnTop` 변경을 짚어 사용자에게 확인함.
+- 남은 것: 없음.
+
 ### [2026-11-18 23:20] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.18-4 반영과 README 갱신 (chore/template-26.11.18-4)
 - 요청: 0_Startup의 Template을 최신으로 올리고, README를 0_Startup에 맞게 갱신. 응답 없음 판정을 30초로, 키는 `autoRestartSeconds` 로.
 - 변경: `packages-lock.json` 고정 커밋 6b950a6 → 3da57e4(26.11.18-4). `Settings.json` `autoRestart` 를 `"autoRestartSeconds": 30` 으로. README에 Alt+F4 재시작·`F` 키 표시(ON/OFF와 감시 상태)·숨은 종료 버튼 없음·서버 로그 문구·예약 종료 편집 도구 다시 빌드 안내, 응답 없음 30초. CHANGELOG(2026-11-18) 갱신.
