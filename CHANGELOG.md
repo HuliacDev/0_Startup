@@ -1,6 +1,18 @@
 # Changelog
 관람객·운영자 경험에 영향을 주는 변경 사항을 기록합니다. 형식은 [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/)를 따릅니다.
 
+## [2026-11-18]
+
+### ⚠ Breaking Changes
+- 숨은 종료 버튼을 없앴으므로 점검할 때는 `F` 키로 Alt+F4 재시작을 끈 뒤 Alt+F4로 앱을 끄며, `F`로 끄지 않고 Alt+F4를 누르면 자동 재시작 설정이 켜져 있을 때 5초 뒤 다시 켜짐.
+- 사내 로그 서버로 보내는 시작·종료 메시지가 `start (user restart)`·`start (auto restart)`, `end (Alt + F4)`·`end (Shutdown Scheduler)`, `end_kill (Task Scheduler)`로 바뀌므로 서버에서 예전 문구(`start (restart)`, `end (by …)`)로 집계하던 곳은 고쳐야 함.
+
+### Changed
+- Windows 빌드를 Alt+F4나 창 닫기로 끄면 자동 재시작 설정이 켜져 있을 때 5초 뒤 다시 켜지고, `F` 키가 창 포커스 복구·항상 위와 함께 이 동작도 끄고 켬.
+
+### Removed
+- 화면 구석의 숨은 종료 버튼과 설정 파일의 종료 버튼 항목(`closeSetting`)을 없앰.
+
 ## [2026-11-03]
 
 ### ⚠ Breaking Changes

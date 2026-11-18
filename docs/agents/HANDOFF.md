@@ -4,6 +4,13 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-18 22:00] Claude → Antigravity · HuliacDev Template 26.11.18-1 반영 (main)
+- 요청: Template에서 숨은 종료 버튼을 빼고, Alt+F4로 끈 앱도 자동 재시작(`F` 키로 함께 끄고 켬)하며 시작·종료 로그 문구를 바꾼 뒤 0_Startup을 다시 git 참조로 되돌리기.
+- 변경: `packages-lock.json` 고정 커밋 9f34e0c → b741851(26.11.18-1). `Settings.json` 에서 `closeSetting` 삭제. README의 설정 파일·자동 재시작·단축키 설명과 CHANGELOG 갱신. Template 작업 중에는 manifest를 `file:../../Template`·`testables` 로 바꿨다가 원래대로 되돌림.
+- Claude 확인: 열려 있는 Editor를 건드리지 않도록 프로젝트 사본을 배치 모드로 열어 Template을 git에서 받고 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. 그 lock을 0_Startup에 옮김. Template 검증 결과(PlayMode 187/187, 교차 리뷰)는 Template `docs/agents/HANDOFF.md` 에 있음.
+- agy (gemini-4-argon-high): `Settings.json` 유효성·lock 한 줄 변경, README·CHANGELOG·TODO 문구와 형식 → 통과
+- 남은 것: 열려 있는 Editor는 다음에 포커스를 받을 때 새 패키지를 받아 컴파일함. 실제 빌드에서 Alt+F4 재시작·`F` 키 표시는 확인하지 않음.
+
 ### [2026-11-18 15:41] Claude → Antigravity + 서브에이전트 · Unity Cloud 연결 값 비우기 (chore/clear-cloud-project-link)
 - 요청: 프로젝트 설정에 든 조직 ID를 새 프로젝트가 물려받지 않게 비우기.
 - 변경: ProjectSettings.asset 의 `cloudProjectId`·`projectName`·`organizationId` 를 Unity 빈 문자열 형식(`key: `)으로 비움, Version 26.11.18.
