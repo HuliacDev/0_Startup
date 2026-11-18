@@ -4,6 +4,13 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-18 23:40] Claude · HuliacDev Template 26.11.18-2 반영 (main)
+- 요청: `F` 키를 눌렀을 때 문구에 watchdog 관련 내용 추가.
+- 변경: `packages-lock.json` 고정 커밋 b741851 → e8a306b(26.11.18-2), CHANGELOG·TODO 갱신. 프로젝트 코드·설정 변경 없음.
+- Claude 확인: 프로젝트 사본을 배치 모드로 열어 Template을 git에서 받아 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. Template 검증(PlayMode 189/189, agy + 서브에이전트 교차 검증)은 Template `docs/agents/HANDOFF.md` 에 있음.
+- 검토자: lock 한 줄만 바뀌어 별도 리뷰는 생략(공통 규칙의 패키지 업데이트 기준).
+- 남은 것: 실제 Windows 빌드에서 표시는 확인하지 않음.
+
 ### [2026-11-18 22:00] Claude → Antigravity · HuliacDev Template 26.11.18-1 반영 (main)
 - 요청: Template에서 숨은 종료 버튼을 빼고, Alt+F4로 끈 앱도 자동 재시작(`F` 키로 함께 끄고 켬)하며 시작·종료 로그 문구를 바꾼 뒤 0_Startup을 다시 git 참조로 되돌리기.
 - 변경: `packages-lock.json` 고정 커밋 9f34e0c → b741851(26.11.18-1). `Settings.json` 에서 `closeSetting` 삭제. README의 설정 파일·자동 재시작·단축키 설명과 CHANGELOG 갱신. Template 작업 중에는 manifest를 `file:../../Template`·`testables` 로 바꿨다가 원래대로 되돌림.
