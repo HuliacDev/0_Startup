@@ -4,7 +4,7 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
-### [2026-11-19 00:50] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.19-1 반영 (main)
+### [2026-11-19 00:23] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.19-1 반영 (main)
 - 요청: `F` 키 표시의 ON 초록·OFF 빨강, 감시가 다시 켠 앱이 클릭 전까지 키 입력을 받지 못하는 문제 수정.
 - 변경: `packages-lock.json` 고정 커밋 fd662de → 4725077(26.11.19-1). Player Settings Version 26.11.19(Editor에서 저장해 빌드가 남긴 Preloaded Assets의 입력 액션 항목도 함께 정리됨). CHANGELOG·TODO.
 - Claude 확인: 프로젝트 사본으로 로컬 Template PlayMode 191/191, Windows 플레이어 스크립트 컴파일 오류 0. 사본을 배치 모드로 열어 Template을 git에서 받아 lock 생성(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0.
