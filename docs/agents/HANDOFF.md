@@ -4,21 +4,28 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
-### [2026-11-19 00:40] Claude · HuliacDev Template 26.11.18-3 반영 (main)
+### [2026-11-18 23:20] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.18-4 반영과 README 갱신 (chore/template-26.11.18-4)
+- 요청: 0_Startup의 Template을 최신으로 올리고, README를 0_Startup에 맞게 갱신. 응답 없음 판정을 30초로, 키는 `autoRestartSeconds` 로.
+- 변경: `packages-lock.json` 고정 커밋 6b950a6 → 3da57e4(26.11.18-4). `Settings.json` `autoRestart` 를 `"autoRestartSeconds": 30` 으로. README에 Alt+F4 재시작·`F` 키 표시(ON/OFF와 감시 상태)·숨은 종료 버튼 없음·서버 로그 문구·예약 종료 편집 도구 다시 빌드 안내, 응답 없음 30초. CHANGELOG(2026-11-18) 갱신.
+- Claude 확인: 프로젝트 사본(새 Settings.json 포함)을 배치 모드로 열어 Template을 git에서 받아 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. 같은 사본에서 로컬 Template으로 PlayMode 191/191.
+- agy (gemini-4-argon-high): README 문구와 코드·링크 앵커 → 통과. Settings.json·README의 30초·새 키는 Template PR #84 교차 검증(agy + 서브에이전트) 묶음에 함께 넣어 둘 다 통과.
+- 남은 것: 열려 있는 Editor는 다음에 포커스를 받을 때 새 패키지를 받음. 실제 빌드에서 Alt+F4·`F` 키 동작은 확인하지 않음.
+
+### [2026-11-18 22:41] Claude · HuliacDev Template 26.11.18-3 반영 (main)
 - 요청: `F` 키 표시에서 포커스 줄과 감시 줄이 각각 한 줄에 들어오게.
 - 변경: `packages-lock.json` 고정 커밋 e8a306b → 6b950a6(26.11.18-3), CHANGELOG·TODO 갱신. 프로젝트 코드·설정 변경 없음.
 - Claude 확인: 프로젝트 사본을 배치 모드로 열어 Template을 git에서 받아 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. Template 검증(PlayMode 190/190, agy + 서브에이전트)은 Template `docs/agents/HANDOFF.md` 에 있음.
 - 검토자: lock 한 줄만 바뀌어 별도 리뷰는 생략.
 - 남은 것: 실제 해상도별 표시는 확인하지 않음.
 
-### [2026-11-18 23:40] Claude · HuliacDev Template 26.11.18-2 반영 (main)
+### [2026-11-18 22:08] Claude · HuliacDev Template 26.11.18-2 반영 (main)
 - 요청: `F` 키를 눌렀을 때 문구에 watchdog 관련 내용 추가.
 - 변경: `packages-lock.json` 고정 커밋 b741851 → e8a306b(26.11.18-2), CHANGELOG·TODO 갱신. 프로젝트 코드·설정 변경 없음.
 - Claude 확인: 프로젝트 사본을 배치 모드로 열어 Template을 git에서 받아 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. Template 검증(PlayMode 189/189, agy + 서브에이전트 교차 검증)은 Template `docs/agents/HANDOFF.md` 에 있음.
 - 검토자: lock 한 줄만 바뀌어 별도 리뷰는 생략(공통 규칙의 패키지 업데이트 기준).
 - 남은 것: 실제 Windows 빌드에서 표시는 확인하지 않음.
 
-### [2026-11-18 22:00] Claude → Antigravity · HuliacDev Template 26.11.18-1 반영 (main)
+### [2026-11-18 21:41] Claude → Antigravity · HuliacDev Template 26.11.18-1 반영 (main)
 - 요청: Template에서 숨은 종료 버튼을 빼고, Alt+F4로 끈 앱도 자동 재시작(`F` 키로 함께 끄고 켬)하며 시작·종료 로그 문구를 바꾼 뒤 0_Startup을 다시 git 참조로 되돌리기.
 - 변경: `packages-lock.json` 고정 커밋 9f34e0c → b741851(26.11.18-1). `Settings.json` 에서 `closeSetting` 삭제. README의 설정 파일·자동 재시작·단축키 설명과 CHANGELOG 갱신. Template 작업 중에는 manifest를 `file:../../Template`·`testables` 로 바꿨다가 원래대로 되돌림.
 - Claude 확인: 열려 있는 Editor를 건드리지 않도록 프로젝트 사본을 배치 모드로 열어 Template을 git에서 받고 lock을 만듦(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0. 그 lock을 0_Startup에 옮김. Template 검증 결과(PlayMode 187/187, 교차 리뷰)는 Template `docs/agents/HANDOFF.md` 에 있음.
