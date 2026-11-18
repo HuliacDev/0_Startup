@@ -12,6 +12,8 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
   - 빈 값 형식·다른 줄 변경 없음, bundleVersion 규칙 → 둘 다 통과
   - 비웠을 때 영향(cloudEnabled 0, UnityConnectSettings 서비스 모두 꺼짐, 서비스 패키지·사용 코드 없음) → 둘 다 통과
   - agy는 첫 요청이 5분 시간 제한에 걸려 빈 결과 → 항목을 둘로 쪼개 다시 맡겨 통과
+- 서브에이전트 (1묶음):
+  - 재검증(11-18): 머지 전 문서 묶음(TODO·HANDOFF의 개인 정보·설정 diff와 사실 일치·형식) → 통과
 - 남은 것: 옛 값은 git 기록에 남음(비밀값이 아니라 기록은 다시 쓰지 않음). 배치 모드는 로그인 없이 열려, 로그인한 Editor에서 열 때 다시 채워지지 않는지는 확인하지 않음.
 
 ### [2026-11-03 12:35] Claude → Antigravity + 서브에이전트 · 회사 기술 문서 10장 기준 맞추기 (chore/bible-folder-structure)
