@@ -4,6 +4,13 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-19 00:50] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.19-1 반영 (main)
+- 요청: `F` 키 표시의 ON 초록·OFF 빨강, 감시가 다시 켠 앱이 클릭 전까지 키 입력을 받지 못하는 문제 수정.
+- 변경: `packages-lock.json` 고정 커밋 fd662de → 4725077(26.11.19-1). Player Settings Version 26.11.19(Editor에서 저장해 빌드가 남긴 Preloaded Assets의 입력 액션 항목도 함께 정리됨). CHANGELOG·TODO.
+- Claude 확인: 프로젝트 사본으로 로컬 Template PlayMode 191/191, Windows 플레이어 스크립트 컴파일 오류 0. 사본을 배치 모드로 열어 Template을 git에서 받아 lock 생성(고정 커밋이 머지 커밋과 같음), 컴파일 오류 0.
+- 교차 검증: 코드는 Template PR #86에서 agy·서브에이전트 교차 검증과 `/code-review` high 지적 6건 반영 후 재리뷰 통과. 0_Startup은 lock·Version·문서만 바뀌어 따로 리뷰하지 않음.
+- 남은 것: 실제 빌드에서 감시가 다시 켠 앱이 포그라운드를 되찾는지, 보조 디스플레이 창에서 키 입력이 들어가는지는 사용자 실기 확인 예정.
+
 ### [2026-11-18 23:51] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.18-5 반영, 응답 없음 판정 키 되돌림 (chore/template-26.11.18-5)
 - 요청: `autoRestartSeconds` 를 원래 이름 `hangRestartSeconds` 로 되돌리기(기본 30초 유지). `alwaysOnTop: true` 는 사용자가 바꾼 값으로, 사용자 확인을 받아 따로 커밋.
 - 변경: `packages-lock.json` 고정 커밋 3da57e4 → fd662de(26.11.18-5). `Settings.json`·README·CHANGELOG의 키를 `hangRestartSeconds` 로.

@@ -10,6 +10,7 @@
 
 ## 완료
 
+- [x] HuliacDev Template 패키지 26.11.18-5 → 26.11.19-1 업데이트(packages-lock.json 고정 커밋 fd662de → 4725077: 감시가 다시 켠 앱이 클릭 전까지 키 입력을 받지 못하던 문제 수정, `F` 키 표시 ON 초록·OFF 빨강), Player Settings Version 26.11.19 — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #86) (완료: 2026-11-19)
 - [x] HuliacDev Template 패키지 26.11.18-4 → 26.11.18-5 업데이트(packages-lock.json 고정 커밋 3da57e4 → fd662de: 응답 없음 판정 키 이름을 `hangRestartSeconds` 로 되돌림, 기본 30초 유지), `Settings.json`·README·CHANGELOG도 `hangRestartSeconds` 로 — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #85) (완료: 2026-11-18)
 - [x] HuliacDev Template 패키지 26.11.18-3 → 26.11.18-4 업데이트(packages-lock.json 고정 커밋 6b950a6 → 3da57e4: 응답 없음 판정 키 `autoRestartSeconds`·기본 30초, README 안내 보강), `Settings.json` 을 `"autoRestartSeconds": 30` 으로, README에 앱 끄는 법·`F` 키 표시·서버 로그·예약 종료 편집 도구 다시 빌드 안내 추가 — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #83·#84) (완료: 2026-11-18)
 - [x] HuliacDev Template 패키지 26.11.18-2 → 26.11.18-3 업데이트(packages-lock.json 고정 커밋 e8a306b → 6b950a6: `F` 키 표시의 각 줄이 한 줄로 보이게 함) — 담당: Claude / 검증: Antigravity + 서브에이전트(Template PR #82) (완료: 2026-11-18)
