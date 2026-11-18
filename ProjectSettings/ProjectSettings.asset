@@ -141,7 +141,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 26.11.10
+  bundleVersion: 26.11.18
   preloadedAssets:
   - {fileID: 11400000, guid: 54d65854c3f73b442b983095e6ef4d3a, type: 2}
   metroInputSource: 0
@@ -938,11 +938,11 @@ PlayerSettings:
   apiCompatibilityLevel: 3
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 300fcc15-65ff-4289-a4ef-7210b9e4441f
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 0_Startup 2026-05-15_14-31-00
-  organizationId: liclem97
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
