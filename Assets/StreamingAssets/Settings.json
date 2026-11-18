@@ -4,7 +4,7 @@
   "targetFrameRate": 0,
   "focusRestoreDelay": 3,
   "focusRestoreRetryInterval": 3,
-  "alwaysOnTop": false,
-  "autoRestart": { "enabled": true, "autoRestartSeconds": 30, "restartDelaySeconds": 5 },
+  "alwaysOnTop": true,
+  "autoRestart": { "enabled": true, "hangRestartSeconds": 30, "restartDelaySeconds": 5 },
   "apiUrl": ""
 }
