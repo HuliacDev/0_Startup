@@ -4,7 +4,7 @@
 
 ## 주요 기능
 
-- 스택 패키지와 공통 코드 [HuliacDev Template](https://github.com/wonjeong97/Template)이 설치·연결돼 있어, 필요한 파일만 복사하면 바로 개발을 시작합니다.
+- 스택 패키지와 공통 코드 [HuliacDev Template](https://github.com/HuliacDev/Template)이 설치·연결돼 있어, 필요한 파일만 복사하면 바로 개발을 시작합니다.
 - DI 루트 `Assets/_Project/Prefabs/GameLifetimeScope.prefab` 이 VContainerSettings의 Root Lifetime Scope라 씬에 두지 않아도 자동으로 생기며, GameManager, APIManager, InactivityTimer(무입력 복귀), ShutdownScheduler(예약 종료), Reporter(로그 뷰어)가 들어 있습니다.
 - 현장 설정(`Settings.json`, `ShutdownSettings.json`)을 빌드한 뒤에도 고칠 수 있고, Windows 빌드는 크래시·강제 종료·응답 없음·Alt+F4 뒤 자동으로 다시 켜집니다(점검할 때는 `F` 키로 끈 뒤 Alt+F4).
 - 에디터 메뉴로 스택 패키지를 한 번에 올리고(`Tools > Update Stack Packages`), Windows 빌드를 만들어 zip으로 보관·복사합니다(`Build > Windows Build`).
@@ -16,7 +16,7 @@
 - 렌더 파이프라인: URP 14 (UI 위주 성능 설정 URP-Performant, 카메라 후처리 꺼짐. 3D를 쓰면 High Fidelity와 후처리를 켭니다)
 - 구조: [VContainer](https://github.com/hadashiA/VContainer)(DI), [UniTask](https://github.com/Cysharp/UniTask)(async), [MessagePipe](https://github.com/Cysharp/MessagePipe)(Pub/Sub), [R3](https://github.com/Cysharp/R3)(리액티브)
 - 유틸: [ZLogger](https://github.com/Cysharp/ZLogger)(로깅), [ZString](https://github.com/Cysharp/ZString)(문자열), [DOTween](https://dotween.demigiant.com/)(트윈)
-- 공통 코드: [HuliacDev Template](https://github.com/wonjeong97/Template)(`com.huliacdev.template`) — GameManagerBase, 무입력 복귀, 자동 종료, 창 포커스 복구, 자동 재시작, UI·Fade·Sound·Video 매니저, API·Arduino 매니저, 로그 보관
+- 공통 코드: [HuliacDev Template](https://github.com/HuliacDev/Template)(`com.huliacdev.template`) — GameManagerBase, 무입력 복귀, 자동 종료, 창 포커스 복구, 자동 재시작, UI·Fade·Sound·Video 매니저, API·Arduino 매니저, 로그 보관
 - Unity 패키지: Input System, Addressables, TextMeshPro, Timeline, Visual Scripting, Test Framework, Memory Profiler, Profile Analyzer
 - 개발 도구: [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity), [MCP for Unity](https://github.com/CoplayDev/unity-mcp)(Claude Code 연동)
 
@@ -53,17 +53,17 @@ Packages/
 ## 사용법 및 설정
 
 - 준비물: Unity 2022.3.62f3, Git(일부 패키지를 Git 주소로 받습니다)
-- 템플릿 폴더: `git clone https://github.com/wonjeong97/0_Startup.git` 으로 한 번 받아 두고, 이 폴더에서는 작업하지 않습니다. 새 프로젝트를 시작하기 전에 `git pull` 로 최신으로 맞춥니다(Code > Download ZIP으로 받은 폴더는 다시 받아야 최신이 됩니다).
+- 템플릿 폴더: `git clone https://github.com/HuliacDev/0_Startup.git` 으로 한 번 받아 두고, 이 폴더에서는 작업하지 않습니다. 새 프로젝트를 시작하기 전에 `git pull` 로 최신으로 맞춥니다(Code > Download ZIP으로 받은 폴더는 다시 받아야 최신이 됩니다).
 - 새 프로젝트 시작: 새 프로젝트는 템플릿의 git 기록 없이 시작합니다.
   1. 템플릿 폴더에서 `Assets/`, `Packages/`, `ProjectSettings/`, `.gitignore`, `.gitattributes`(큰 이미지·영상은 Git LFS로, DLL·서드파티 파일은 일반 파일로 저장하는 규칙), `CLAUDE.md`, `README.project.md` 일곱 개만 새 폴더로 복사합니다. `Library`, `.git` 등 나머지는 복사하지 않습니다.
   2. Unity Hub의 **Add > Add project from disk** 로 새 폴더를 엽니다. 처음 한 번은 패키지를 받느라 몇 분 걸립니다.
   3. **Edit > Project Settings > Player** 의 **Product Name** 을 새 프로젝트 이름으로 바꿉니다. 앱 로그 폴더와 PlayerPrefs 위치가 Company Name·Product Name으로 정해지므로, 그대로 두면 같은 PC의 다른 앱과 섞입니다.
   4. `README.project.md` 의 이름을 `README.md` 로 바꾸고 칸을 채웁니다. Unity 버전을 올리면 README의 Unity 버전도 함께 고칩니다.
 - 패키지 업데이트: 이미 시작한 프로젝트에는 템플릿 변경이 자동으로 들어가지 않습니다. 공통 코드와 스택 패키지(NuGet 패키지 포함)는 `Tools > Update Stack Packages` 로 올리고, 그 밖의 변경은 필요한 파일만 골라 옮깁니다. 버전을 고정한 URP·Input System·Addressables와 `Assets/Plugins` 의 DOTween은 이 메뉴가 건드리지 않습니다. NuGet 창의 Update All은 일부 의존성을 오히려 내릴 수 있어 쓰지 않습니다.
-- 설정 파일: `Assets/StreamingAssets/Settings.json`(무입력 복귀, 프레임레이트, 창 포커스 복구·항상 위, 자동 재시작, API 주소)과 `ShutdownSettings.json`(요일별 자동 종료). `Settings.json` 키 설명은 [HuliacDev Template 설정 안내](https://github.com/wonjeong97/Template/blob/main/docs/SETTINGS.md), `ShutdownSettings.json` 은 [예약 종료](https://github.com/wonjeong97/Template/blob/main/docs/USAGE.md#예약-종료-shutdownscheduler)에 있습니다.
-- 자동 재시작: Windows 빌드가 크래시하거나 강제로 꺼지거나(`taskkill /F` 등) 30초 넘게 '응답 없음'이거나 Alt+F4·창 닫기로 꺼지면 5초 뒤 다시 켜고, 예약 종료로 끈 경우는 켜지 않습니다. 점검하려고 앱을 끌 때는 `F` 키로 Alt+F4 재시작을 끈 뒤(화면 위쪽 첫 줄에 OFF, 둘째 줄에 `Watchdog: watching (still restarts after crash or hang)` 처럼 감시 상태 표시) Alt+F4를 누릅니다. 숨은 종료 버튼은 없습니다. 현장 PC에 따로 설치할 것은 없고 `Settings.json` 의 `autoRestart` 로 끄거나 시간(`hangRestartSeconds` 응답 없음 판정, `restartDelaySeconds` 재시작 대기)을 바꿉니다(`F` 로 끄고 Alt+F4로 끈 뒤 다시 켜야 반영). 기록은 앱 로그 폴더(`%USERPROFILE%\AppData\LocalLow\<Company Name>\<Product Name>\Logs`)의 `AutoRestart.log` 에 남고, 자세한 동작은 [HuliacDev Template 사용 안내](https://github.com/wonjeong97/Template/blob/main/docs/USAGE.md#자동-재시작-autorestartwatchdog-windows-전용)에 있습니다.
+- 설정 파일: `Assets/StreamingAssets/Settings.json`(무입력 복귀, 프레임레이트, 창 포커스 복구·항상 위, 자동 재시작, API 주소)과 `ShutdownSettings.json`(요일별 자동 종료). `Settings.json` 키 설명은 [HuliacDev Template 설정 안내](https://github.com/HuliacDev/Template/blob/main/docs/SETTINGS.md), `ShutdownSettings.json` 은 [예약 종료](https://github.com/HuliacDev/Template/blob/main/docs/USAGE.md#예약-종료-shutdownscheduler)에 있습니다.
+- 자동 재시작: Windows 빌드가 크래시하거나 강제로 꺼지거나(`taskkill /F` 등) 30초 넘게 '응답 없음'이거나 Alt+F4·창 닫기로 꺼지면 5초 뒤 다시 켜고, 예약 종료로 끈 경우는 켜지 않습니다. 점검하려고 앱을 끌 때는 `F` 키로 Alt+F4 재시작을 끈 뒤(화면 위쪽 첫 줄에 OFF, 둘째 줄에 `Watchdog: watching (still restarts after crash or hang)` 처럼 감시 상태 표시) Alt+F4를 누릅니다. 숨은 종료 버튼은 없습니다. 현장 PC에 따로 설치할 것은 없고 `Settings.json` 의 `autoRestart` 로 끄거나 시간(`hangRestartSeconds` 응답 없음 판정, `restartDelaySeconds` 재시작 대기)을 바꿉니다(`F` 로 끄고 Alt+F4로 끈 뒤 다시 켜야 반영). 기록은 앱 로그 폴더(`%USERPROFILE%\AppData\LocalLow\<Company Name>\<Product Name>\Logs`)의 `AutoRestart.log` 에 남고, 자세한 동작은 [HuliacDev Template 사용 안내](https://github.com/HuliacDev/Template/blob/main/docs/USAGE.md#자동-재시작-autorestartwatchdog-windows-전용)에 있습니다.
 - 빌드: `Build > Windows Build` 가 Windows 빌드를 `Build/` 에 만들고, 버전 관리용 zip을 빌드 보관 폴더의 `<프로젝트 폴더 이름>/<YYMMDD>-<N>/` 에 보관하고(빌드마다 새 폴더), 현장 PC로 옮길 빌드를 복사 폴더의 `<프로젝트 폴더 이름>/` 에 복사합니다(복사할지는 '빌드 뒤 복사' 설정, 기본은 매번 묻기. 비운 뒤 최신 빌드만 둠). 두 폴더는 팀원·PC마다 다르므로 각자 `Edit > Preferences > HuliacDev Build`(또는 `Build > Setting`)에서 정하며, 처음 빌드할 때 정해져 있지 않으면 설정을 열지 묻습니다.
-- 서버 로그: `Settings.json` 의 `apiUrl` 을 적으면 `APIManager` 가 시작(`start`·`start (user restart)`·`start (auto restart)`)·종료(`end (Alt + F4)`·`end (Shutdown Scheduler)`)·idle(`move_idle`·`move_idle_timeout`) 로그를 보냅니다. 문구는 [HuliacDev Template README](https://github.com/wonjeong97/Template#사용법-및-설정)에 있습니다.
+- 서버 로그: `Settings.json` 의 `apiUrl` 을 적으면 `APIManager` 가 시작(`start`·`start (user restart)`·`start (auto restart)`)·종료(`end (Alt + F4)`·`end (Shutdown Scheduler)`)·idle(`move_idle`·`move_idle_timeout`) 로그를 보냅니다. 문구는 [HuliacDev Template README](https://github.com/HuliacDev/Template#사용법-및-설정)에 있습니다.
 - 자동 종료 설정 프로그램: `ShutdownScheduleEditor.exe` 는 약 150MB라 저장소에 없습니다. 필요하면 `Tools > Build Shutdown Scheduler Exe` 로 만듭니다(.NET 8 SDK 필요). 작업 스케줄러 백업이 쓰는 가드 스크립트(종료 로그 `end_kill (Task Scheduler)` 포함)는 이 exe가 등록할 때 쓰므로, Template을 올린 뒤에는 다시 빌드해 현장 PC에서 `ShutdownSettings.json` 을 열어 저장해야 바뀐 내용이 반영됩니다.
 - Roslyn: `Assets/Plugins/Roslyn` 은 MCP for Unity 전용이라 Editor 전용으로 설정돼 있습니다. 폴더를 지우고 다시 설치하면 Inspector에서 Editor만 다시 체크합니다.
 - 단축키(템플릿 기본): `D` 로그 뷰어, `I` 런타임 인스펙터, `M` 마우스 커서 표시, `F` 창 포커스 복구(와 항상 위, Alt+F4 재시작) 끄기/켜기(화면 위쪽에 상태와 자동 재시작 감시 상태를 2초 동안 표시)

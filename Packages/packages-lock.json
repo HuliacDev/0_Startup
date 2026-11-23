@@ -69,7 +69,7 @@
       "hash": "4a2d9c8e6a4f0fa50ecb24ec2d14ae588b1951da"
     },
     "com.huliacdev.template": {
-      "version": "https://github.com/wonjeong97/Template.git",
+      "version": "https://github.com/HuliacDev/Template.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
