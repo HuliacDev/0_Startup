@@ -4,6 +4,13 @@ Claude가 Antigravity(agy)와 리뷰 서브에이전트에 맡긴 검증 기록.
 
 ---
 
+### [2026-11-24 13:00] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.24-1 반영 (chore/template-26.11.24-1)
+- 요청: 0_Startup의 Template을 26.11.24-1로 올리기.
+- 변경: `packages-lock.json` 고정 커밋 4725077 → e54925e(26.11.24-1), Player Settings Version 26.11.24, TODO. Breaking·설정 키 변경 없음. 영상 반복을 쓰는 코드가 없어 관람객·운영자에게 보이는 변화가 없으므로 CHANGELOG는 그대로.
+- Claude 확인: 배치 모드로 열어 git에서 받은 고정 커밋이 Template main과 같고 컴파일 오류·경고 0, 바뀐 파일은 lock 한 줄. 플레이 모드·테스트는 돌리지 않음.
+- 교차 검증: 코드는 Template PR #87에서 agy·서브에이전트 교차 검증과 `/code-review` high 지적 5건 반영 후 재리뷰 통과. 0_Startup은 lock·Version·문서만 바뀌어 따로 리뷰하지 않음.
+- 남은 것: `RootLifetimeScope` 가 자동으로 뜨는 이 프로젝트에서 Template 전체 PlayMode 테스트를 돌리면 기존 로그 테스트 1건이 실패함(Template TODO).
+
 ### [2026-11-19 00:23] Claude → Antigravity + 서브에이전트 · HuliacDev Template 26.11.19-1 반영 (main)
 - 요청: `F` 키 표시의 ON 초록·OFF 빨강, 감시가 다시 켠 앱이 클릭 전까지 키 입력을 받지 못하는 문제 수정.
 - 변경: `packages-lock.json` 고정 커밋 fd662de → 4725077(26.11.19-1). Player Settings Version 26.11.19(Editor에서 저장해 빌드가 남긴 Preloaded Assets의 입력 액션 항목도 함께 정리됨). CHANGELOG·TODO.
